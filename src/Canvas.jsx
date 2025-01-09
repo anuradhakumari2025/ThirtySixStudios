@@ -16,6 +16,11 @@ function Canvas({ details }) {
         setIndex({ value: Math.round(index.value) });
       },
     });
+    gsap.from(canvasRef.current,{
+      opacity:0,
+      duration:0.7,
+      ease:"power2.inOut"
+    })
   });
   useEffect(() => {
     const scale = window.devicePixelRatio;
